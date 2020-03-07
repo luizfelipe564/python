@@ -2,6 +2,10 @@ ac =  input("defina seu nivel de acesso(user,adm ou guest): ").upper()
 if ac != "USER" and ac != "ADM" and ac != "GUEST"  and ac != "":
     ac = input ("termo invalido, defina novamente: ").upper()
 
+if ac == "GUEST" :
+    print("Bem vindo convidado!")
+    exit()
+    
 if ac == "":
     print("bem vindo desconhecido")
     exit()
@@ -21,12 +25,7 @@ if ac == "ADM" and ge == "HOMEM":
 elif ac == "ADM" and ge == "MULHER":
     print("Bem vindo administradora!")
     
-
-if ac == "GUEST" and ge == "HOMEM":
-    print("Bem vindo convidado!")
-elif ac == "GUEST" and ge == "MULHER":
-    print("Bem vindo convidada!")
-    
     
 else:
     exit()
+
