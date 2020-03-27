@@ -7,10 +7,10 @@ if idade < 15 or idade > 60:
 
 risco = input(",esta em grupo de risco sim ou não:").upper()
 
-if risco != "SIM" and risco != "NAO":
+while risco != "SIM" and risco != "NAO":
     risco = input("digite apenas sim ou não: ").upper()
 
-while risco == "SIM":
+if risco == "SIM":
     print("procure acesso prioritario")
 
 else:
