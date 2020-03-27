@@ -1,5 +1,5 @@
 graduacao = input("que tipo de graduação voce realiza: ").upper()
-if graduacao != "TECNOLOGO" and graduacao != "BACHARELADO":
+while graduacao != "TECNOLOGO" and graduacao != "BACHARELADO":
     graduacao = input ("digite uma graduação valida: ").upper()
 if graduacao == "TECNOLOGO":
         print("2 a 3 anos")
