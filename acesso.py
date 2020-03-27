@@ -1,5 +1,5 @@
 ac =  input("defina seu nivel de acesso(user,adm ou guest): ").upper()
-if ac != "USER" and ac != "ADM" and ac != "GUEST"  and ac != "":
+while ac != "USER" and ac != "ADM" and ac != "GUEST"  and ac != "":
     ac = input ("termo invalido, defina novamente: ").upper()
 
 if ac == "GUEST" :
@@ -11,7 +11,7 @@ if ac == "":
     exit()
 
 ge = input("qual seu genero(homem/mulher): ").upper()
-if ge != "HOMEM" and ge != "MULHER":
+while ge != "HOMEM" and ge != "MULHER":
     ge = input ("termo invalido, defina novamente: ").upper()
 
 if ac == "USER" and ge == "HOMEM":
