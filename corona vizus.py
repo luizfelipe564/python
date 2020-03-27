@@ -10,7 +10,7 @@ risco = input(",esta em grupo de risco sim ou não:").upper()
 if risco != "SIM" and risco != "NAO":
     risco = input("digite apenas sim ou não: ").upper()
 
-if risco == "SIM":
+while risco == "SIM":
     print("procure acesso prioritario")
 
 else:
