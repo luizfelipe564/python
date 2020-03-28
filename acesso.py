@@ -1,4 +1,5 @@
 ac =  input("defina seu nivel de acesso(user,adm ou guest): ").upper()
+
 while ac != "USER" and ac != "ADM" and ac != "GUEST"  and ac != "":
     ac = input ("termo invalido, defina novamente: ").upper()
 
@@ -9,6 +10,10 @@ if ac == "GUEST" :
 if ac == "":
     print("bem vindo desconhecido")
     exit()
+
+sen = input("digite sua senha: ")    
+while sen != "12345":
+    sen = input ("senha invalida , digite novamente: ").upper()
 
 ge = input("qual seu genero(homem/mulher): ").upper()
 while ge != "HOMEM" and ge != "MULHER":
@@ -28,4 +33,3 @@ elif ac == "ADM" and ge == "MULHER":
     
 else:
     exit()
-
