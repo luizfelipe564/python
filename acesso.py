@@ -37,8 +37,8 @@ while ge != "HOMEM" and ge != "MULHER":
         count += 1
 
 lista_m = ["luiz", "joao", "renato"]
-lista_f = ["julia", "mariana", "renata"]
-if ac == "USER":
+lista_f = ["julia", "mariana", "sara"]
+if ac == "USER" and ge == "HOMEM":
     us = input("digite o nome do usuario: ")
     for x in lista_m:
         while x != us:
@@ -51,6 +51,8 @@ if ac == "USER":
         if x == us:
             print("Bem vindo usuario! {}".format(us))
             exit()
+if ac == "USER" and ge == "MULHER":
+    us = input("digite o nome do usuario: ")
     for x in lista_f:
         while x != us:
             us = input("'{}' não é um usuario valido, tente novamente: ".format(us))  
@@ -64,7 +66,7 @@ if ac == "USER":
             exit()
 listad_m = ["dmitry", "marcos", "carl"]
 listad_f = ["jujuzin", "elian", "artorias"]
-if ac == "ADM":
+if ac == "ADM" and ge == "HOMEM":
     ad = input("digite o nome do administrador: ")
     for x in listad_m:
         while x != ad:
@@ -77,6 +79,8 @@ if ac == "ADM":
         if x == ad:
             print("Bem vindo administrador! {}".format(ad))
             exit()
+if ac == "ADM" and ge == "MULHER":
+    ad = input("digite o nome do administrador: ")
     for x in listad_f:
         while x != ad:
             ad = input("'{}' não é um administrador valido, tente novamente: ".format(ad))
