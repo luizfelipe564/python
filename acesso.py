@@ -1,3 +1,4 @@
+
 ac =  input("defina seu nivel de acesso(user,adm ou guest): ").upper()
 count = 1
 while ac != "USER" and ac != "ADM" and ac != "GUEST"  and ac != "":
@@ -22,7 +23,7 @@ passwd = "12345"
 while sen != passwd:
     sen = getpass("senha invalida , digite novamente: ").upper()
     if count == 3:
-        print("acesso negado, muitas tentativas".format(ac))
+        print("acesso negado, muitas tentativas")
         exit()
     else:
         count += 1
@@ -36,13 +37,13 @@ while ge != "HOMEM" and ge != "MULHER":
     else:
         count += 1
 
-lista_m = ["luiz", "joao", "renato"]
-lista_f = ["julia", "mariana", "sara"]
+lista_m = ["luiz".upper(), "joao".upper(), "renato".upper()]
+lista_f = ["julia".upper(), "mariana".upper(), "sara".upper()]
 if ac == "USER" and ge == "HOMEM":
-    us = input("digite o nome do usuario: ")
+    us = input("digite o nome do usuario: ").upper()
     for x in lista_m:
-        while x != us:
-            us = input("'{}' não é um usuario valido, tente novamente: ".format(us))  
+        while x != us and x != all in lista_m:
+            us = input("'{}' não é um usuario valido, tente novamente: ".format(us)).upper()
             if count == 3:
                 print("acesso negado,'{}' não é um usuario".format(us))
                 exit()
@@ -52,10 +53,10 @@ if ac == "USER" and ge == "HOMEM":
             print("Bem vindo usuario! {}".format(us))
             exit()
 if ac == "USER" and ge == "MULHER":
-    us = input("digite o nome do usuario: ")
+    us = input("digite o nome do usuario: ").upper()
     for x in lista_f:
-        while x != us:
-            us = input("'{}' não é um usuario valido, tente novamente: ".format(us))  
+        while x != us and x != all in lista_f:
+            us = input("'{}' não é um usuario valido, tente novamente: ".format(us)).upper()
             if count == 3:
                 print("acesso negado,'{}' não é um usuario".format(us))
                 exit()
@@ -64,13 +65,13 @@ if ac == "USER" and ge == "MULHER":
         if x == us:
             print("Bem vindo usuaria! {}".format(us))  
             exit()
-listad_m = ["dmitry", "marcos", "carl"]
-listad_f = ["jujuzin", "elian", "artorias"]
+listad_m = ["dmitry".upper(), "marcos".upper(), "carl".upper()]
+listad_f = ["jujuzin".upper(), "elian".upper(), "artorias".upper()]
 if ac == "ADM" and ge == "HOMEM":
-    ad = input("digite o nome do administrador: ")
+    ad = input("digite o nome do administrador: ").upper()
     for x in listad_m:
-        while x != ad:
-            ad = input("'{}' não é um administrador valido, tente novamente: ".format(ad))
+        while x != ad and x != all in listad_m:
+            ad = input("'{}' não é um administrador valido, tente novamente: ".format(ad)).upper()
             if count == 3:
                 print("acesso negado,'{}' não é um administrador".format(ad))
                 exit()
@@ -80,10 +81,10 @@ if ac == "ADM" and ge == "HOMEM":
             print("Bem vindo administrador! {}".format(ad))
             exit()
 if ac == "ADM" and ge == "MULHER":
-    ad = input("digite o nome do administrador: ")
+    ad = input("digite o nome do administrador: ").upper()
     for x in listad_f:
-        while x != ad:
-            ad = input("'{}' não é um administrador valido, tente novamente: ".format(ad))
+        while x != ad and x != all in listad_f:
+            ad = input("'{}' não é um administrador valido, tente novamente: ".format(ad)).upper()
             if count == 3:
                 print("acesso negado,'{}' não é um administrador".format(ad))
                 exit()
