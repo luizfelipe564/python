@@ -35,9 +35,9 @@ while True:
         print("________________________________________________Mastercard_________________________________________________")
         print("___________________________________________________AMEX____________________________________________________")
         print("__________________________________________________Dinners__________________________________________________")
-        marca = input("qual a marca de cartao que deseja pesquisar: ")
+        marca = input("qual a marca de cartao que deseja pesquisar: ").upper()
         while marca != "VISA" and marca != "Mastercard" and marca != "AMEX" and marca != "Dinners":
-            marca = input(" marca {} nao consta , verifique e digite novamente: ".format(marca))
+            marca = input(" marca {} nao consta , verifique e digite novamente: ".format(marca)).upper()
             if count == 2:
                 print("A marca {} nao consta na lista de vazamentos!".format(marca))
                 break
