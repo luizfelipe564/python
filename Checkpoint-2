@@ -1,0 +1,66 @@
+count = 0
+from time import sleep 
+from os import system, name 
+def clear(): 
+    if name == 'nt': 
+        _ = system('cls') 
+    else: 
+        _ = system('clear') 
+listae=["luiz2203@gmail.com", "renato06@outlook.com", "magalhães1990@live.com", "zbrjr@gmail.com", "manezingameplay@outlook.com", "julioulio2020@live.com", "marcondessilva@gmail.com", "totoro23@outlook.com", "mariogames@live.com", "ricagames@gmail.com"]
+dicionariocartao = {"MARCOS": ["VISA", 26055, 4860417975388174818], "RAFA": ["MASTERCARD", 9253, 2720993222202898], "ALBERICO": ["AMEX", 1778, 342836578416061], "RENAN": ["DINNERS", 5398, 36064149200861]}
+listacpf=["680.674.400-18", "820.554.410-78", "620.384.930-81", "505.432.680-47", "831.346.820-36", "128.957.000-01", "811.823.260-30", "729.761.920-57"]
+def menu():
+    print("________________________________________________VAZAMENT.IO________________________________________________")
+    print("EMAILS VAZADOS____________________________________________________________________________________________1")
+    print("CARTOES VAZADOS___________________________________________________________________________________________2")
+    print("CPF_______________________________________________________________________________________________________3")
+    print("SAIR______________________________________________________________________________________________________4")
+while True:
+    menu()
+    cliente = int(input("Digite o numero a direita da  informação deseja buscar: "))
+    while cliente >=5 :
+        cliente = int(input("Comando {} invalido, digite novamente: ".format(cliente)))
+        if count == 2:
+            clear()
+            break
+        else:
+            count += 1    
+    if cliente == 1 :
+        capturae = input("digite o email que deseja pesquisar: ")
+        for x in listae:
+            if x == capturae:
+                print("o email {} esta na lista , suas informacoes podem ter vazado".format(capturae))
+                break
+            else:
+                print("nao esta na lista")
+        sleep(5) 
+        clear() 
+    if cliente == 2:
+        nome = input("Digite um nome : ").upper()
+        lista = dicionariocartao.get(nome)
+        if nome != "MARCOS"and nome != "RAFA"and nome != "ALBERICO"and nome != "RENAN":
+            print("nao ha vazamentos nesse nome")
+            sleep(5) 
+            clear() 
+        else:
+            for nome in dicionariocartao.get(nome):
+                if lista != None:
+                    print("marca .................", lista[0])
+                    print("senha................ ", lista[1])
+                    print("numero do cartao..... ", lista[2])
+                    sleep(5) 
+                    clear()
+                    break 
+    if cliente == 3 :
+        cpf = input("digite o cpf que deseja pesquisar: ")
+        for x in listacpf:
+            if x == cpf:
+                print("o CPF {} esta na lista , suas informacoes podem ter vazado".format(cpf))
+                break
+            else:
+                print("nao esta na lista")
+                sleep(5) 
+                clear()
+                break
+    if cliente == 4 :
+        break
