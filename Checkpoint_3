@@ -1,8 +1,6 @@
 import base64
 from Crypto.Cipher import AES
-n = 16
-numero = []
-x = 0
+
 def multitexto(s):
     while len(s) % 16 != 0:
         s += ' '
