@@ -25,10 +25,10 @@ if hash0.digest() != hash1.digest():
         p = input(f"{p} invalido,tente(s/n): ").upper()
     if p == "S":        
         print("efetuando restauração")
-        arquivo = open(arq1, 'r') # Abra o arquivo (leitura)
+        arquivo = open(arq1, 'r')
         conteudo = arquivo.readlines()
-        arquivo = open(arq2, 'w') # Abre novamente o arquivo (escrita)
-        arquivo.writelines(conteudo)    # escreva o conteúdo criado anteriormente nele.
+        arquivo = open(arq2, 'w') 
+        arquivo.writelines(conteudo)
         arquivo.close()
         print("\ntudo pronto")
         print("\nencerrando programa")
