@@ -1,6 +1,5 @@
 from os import system, name 
 from time import sleep 
-import hashlib
 
 def clear(): 
     if name == 'nt': 
@@ -11,13 +10,11 @@ clear()
 arq1 = input("Digite o nome do arquivo original: ")
 arq2 = input("Digite o nome do arquivo que deseja verificar a integridade: ")
 
-hash0 = hashlib.new('ripemd160')
-hash0.update(open(arq1, 'rb').read())
 
-hash1 = hashlib.new('ripemd160')
-hash1.update(open(arq2, 'rb').read())
+v1 = (open(arq1, 'rb').read())
+v2 = (open(arq2, 'rb').read())
 
-if hash0.digest() != hash1.digest():
+if v1 != v2:
     p = input(f"foi identificada uma alteração no arquivo {arq2}, deseja restaura-lo(s/n): ").upper()
     while p != "S" and p != "N":
         clear()
